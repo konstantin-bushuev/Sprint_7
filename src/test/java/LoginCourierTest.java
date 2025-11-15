@@ -1,3 +1,5 @@
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.junit4.DisplayName;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -8,6 +10,8 @@ import org.junit.Test;
 import org.junit.Before;
 import steps.CourierSteps;
 
+@Epic("Функционал курьера")
+@Feature("Логин курьера в систему")
 public class LoginCourierTest extends BaseTest{
 
     private CourierSteps courierSteps = new CourierSteps();

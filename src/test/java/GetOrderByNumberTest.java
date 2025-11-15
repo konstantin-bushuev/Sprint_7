@@ -1,6 +1,9 @@
 import static java.util.concurrent.TimeUnit.DAYS;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
+
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.junit4.DisplayName;
 import model.Order;
 import net.datafaker.Faker;
@@ -10,6 +13,8 @@ import steps.OrderSteps;
 import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
+@Epic("Функционал заказа")
+@Feature("Получить заказ по номеру")
 public class GetOrderByNumberTest extends BaseTest{
 
     private OrderSteps orderSteps = new OrderSteps();
@@ -31,7 +36,7 @@ public class GetOrderByNumberTest extends BaseTest{
     }
 
     @Test
-    @DisplayName("Проверка получения заказа по номеру: переден существующий номер")
+    @DisplayName("Проверка получения заказа по номеру: передан существующий номер")
     public void getOrderByNumberTrackProvided() {
         Integer track = orderSteps.createOrder(order).extract().body().path("track");
         order.setTrack(track);
@@ -42,7 +47,7 @@ public class GetOrderByNumberTest extends BaseTest{
     }
 
     @Test
-    @DisplayName("Проверка получения заказа по номеру: переден несуществующий номер")
+    @DisplayName("Проверка получения заказа по номеру: передан несуществующий номер")
     public void getOrderByNumberUnexistentTrackProvided() {
         Integer track = ThreadLocalRandom.current().nextInt(8000000, 9000000);
 

@@ -1,4 +1,7 @@
 import static org.hamcrest.CoreMatchers.equalTo;
+
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.junit4.DisplayName;
 import model.Courier;
 import net.datafaker.Faker;
@@ -8,6 +11,8 @@ import org.junit.Before;
 import steps.CourierSteps;
 import java.util.Locale;
 
+@Epic("Функционал курьера")
+@Feature("Создать курьера")
 public class CreateCourierTest extends BaseTest{
 
     private CourierSteps courierSteps = new CourierSteps();

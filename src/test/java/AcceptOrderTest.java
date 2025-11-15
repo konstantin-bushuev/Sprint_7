@@ -1,5 +1,8 @@
 import static java.util.concurrent.TimeUnit.DAYS;
 import static org.hamcrest.CoreMatchers.equalTo;
+
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.junit4.DisplayName;
 import model.Courier;
 import model.Order;
@@ -12,6 +15,8 @@ import steps.OrderSteps;
 import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
+@Epic("Функционал заказа")
+@Feature("Принять заказ")
 public class AcceptOrderTest extends BaseTest {
 
     private CourierSteps courierSteps = new CourierSteps();

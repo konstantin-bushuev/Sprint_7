@@ -1,4 +1,7 @@
 import static org.hamcrest.CoreMatchers.equalTo;
+
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.junit4.DisplayName;
 import model.Courier;
 import net.datafaker.Faker;
@@ -8,6 +11,8 @@ import steps.CourierSteps;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+@Epic("Функционал курьера")
+@Feature("Удалить курьера")
 public class DeleteCourierTest extends BaseTest {
 
     private CourierSteps courierSteps = new CourierSteps();

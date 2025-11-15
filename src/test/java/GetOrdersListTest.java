@@ -1,3 +1,5 @@
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.junit4.DisplayName;
 import static java.util.concurrent.TimeUnit.DAYS;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -9,6 +11,8 @@ import steps.OrderSteps;
 import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
+@Epic("Функционал заказа")
+@Feature("Получить список заказов")
 public class GetOrdersListTest extends BaseTest {
 
     private OrderSteps orderSteps = new OrderSteps();
